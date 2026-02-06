@@ -45,7 +45,6 @@ check_installed_version() {
     return 1
 }
 
-
 usage() {
     echo "Usage: $0 {-v <version>}"
     echo "Container update"
