@@ -75,8 +75,9 @@ if [ "$OPTS" -eq 0 ]; then
 fi
 
 # Check if container is still running 
-if launchctl list | grep -q -e 'com\.apple\.container\W'; then
-    echo '`container` is still running. Please stop it first: `container system stop`'
+CONTAINER_RUNNING=$(launchctl list | grep -e 'com\.apple\.container\W')
+if [ -n "$CONTAINER_RUNNING" ]; then
+    echo '`container` is still running. Please ensure the service is stopped by running `container system stop`'
     exit 1
 fi
 
