@@ -30,7 +30,7 @@ container system start
 
 ### Upgrade or downgrade
 
-For both upgrading and downgrading, you can manually download and install the signed installer package by following the steps from [initial install](#initial-install) or use the `container-update.sh` script (installed to `/usr/local/bin`).
+For both upgrading and downgrading, you can manually download and install the signed installer package by following the steps from [initial install](#initial-install) or use the `update-container..sh` script (installed to `/usr/local/bin`).
 
 If you're upgrading and downgrading, you must stop your existing `container`:
 
@@ -41,14 +41,14 @@ container system stop
 For upgrading to the latest release version, simply run the command below:
 
 ```bash
-/usr/local/bin/container-update.sh
+/usr/local/bin/update-container.sh
 ```
 
 If you're downgrading, you must uninstall your existing `container` (the `-k` flag keeps your user data, while `-d` removes it):
 
 ```bash
 /usr/local/bin/uninstall-container.sh -k
-/usr/local/bin/container-update.sh -v 0.3.0
+/usr/local/bin/update-container.sh -v 0.3.0
 ```
 
 Start the system service with:

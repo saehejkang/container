@@ -47,7 +47,7 @@ check_installed_version() {
 
 usage() {
     echo "Usage: $0 {-v <version>}"
-    echo "Container update"
+    echo "Update container"
     echo
     echo "Options:"
     echo "v <version>     Install a specific release version"
@@ -73,7 +73,7 @@ if [ "$OPTS" -eq 0 ]; then
     LATEST=true
 fi
 
-# Check if container is still running 
+# Check if container is still running
 CONTAINER_RUNNING=$(launchctl list | grep -e 'com\.apple\.container\W')
 if [ -n "$CONTAINER_RUNNING" ]; then
     echo '`container` is still running. Please ensure the service is stopped by running `container system stop`'

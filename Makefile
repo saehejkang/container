@@ -109,7 +109,7 @@ $(STAGING_DIR):
 	@install config/container-core-images-config.json "$(join $(STAGING_DIR), libexec/container/plugins/container-core-images/config.json)"
 
 	@echo Install update script
-	@install scripts/container-update.sh "$(join $(STAGING_DIR), bin/container-update.sh)"
+	@install scripts/update-container.sh "$(join $(STAGING_DIR), bin/update-container.sh)"
 	@echo Install uninstaller script
 	@install scripts/uninstall-container.sh "$(join $(STAGING_DIR), bin/uninstall-container.sh)"
 
